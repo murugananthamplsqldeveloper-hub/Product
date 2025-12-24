@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+* {  box-sizing: border-box;}
+
+.responsive-form {
+  align-items: center;
+  max-width: 400px;
+  width:80%;
+  border-radius: 2px;
+  border: 3px solid #411df3;;
+  background-color:  #f2f2f2;
+  padding: 20px;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+label {
+  min-width: 48%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  align-content: last baseline;
+}
+
+input[type=text],input[type=password], select {
+  min-width: 50%;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+button[type=submit] {
+  width: 250px;
+  background-color: #4f46ee;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 200px) {
+  label,
+  input[type=text],
+  button[type=submit],
+  select, textarea {
+    flex: 100%;
+    min-width: 100%;
+  }
+}
+
+</style>
+    
+</head>
+<body>
+    <form>
+    <div class="form-header">
+      <div class="responsive-form">
+        <h2>Login Form</h2>
+        <label>Login </label><input type="text" placeholder="Login Name" required/>
+        <label>Password </label><input type="password" placeholder="Password" required/>
+        <button type="submit" class="btn"><a href="School_form.html">Login</a></button>
+      <a href="Forgote_password.html">Forgote Password</a>
+      </div>
+        
+    </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+            // Get the select element by its ID
+var selectAge = document.getElementById("selectAge");
+
+// Add a default, disabled option
+var defaultOption = document.createElement("option");
+defaultOption.value = "";
+defaultOption.text = "--Select an age--";
+defaultOption.disabled = true;
+defaultOption.selected = true;
+selectAge.appendChild(defaultOption);
+
+// Loop to add ages from 1 to 100
+for (let i = 1; i <= 100; i++) {
+    var option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    selectAge.appendChild(option);
+}
+
+        </script>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div class="">
+            <label for="selectAge">Select your age:</label>
+            <select name="age" id="selectAge"></select>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        
+        <style>
+            body {
+                     font-family: sans-serif, Arial;
+                 }
+        </style>
+    </head>
+
+    <body>
+        
+        <!--
+        <div ><label for="birth_date">Birth Date: </label>
+        <input type="text" id="birth_date" /></div>
+        <div id="age" style="padding-top:2em;"></div>
+            -->
+        <div class="container mt-5">
+  <form>
+    <div><label for="birth_date">Birth Date: </label>
+      <input type="date" id="birth_date" name="birth_date" />
+    </div>
+    <div id="age" style="padding-top:2em;">
+      Age: <span r-calc="calculateAge(birth_date)"></span>
+    </div>
+      </form>
+</div>
+<script type="text/javascript">
+function calculateAge(date) 
+{
+  const now = new Date();
+  const diff = Math.abs(now - date );
+  const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365)); 
+  return age
+}
+
+var picker = new Pikaday({ 
+  field: document.getElementById('birth_date') ,
+  yearRange:[1900,2020],
+  onSelect: function(date) {
+  let age = calculateAge(date);
+  document.getElementById('age').innerHTML = "age: "+age ;
+  }                        
+});
+        </script>
+
+
+    </body>
+
+</html>
